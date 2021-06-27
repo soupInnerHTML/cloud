@@ -7,11 +7,11 @@ import auth from "../mobx/auth";
 class Firebase {
     auth = firebase.auth
 
-    db(path) {
-        return firebase.database().ref(path)
+    db(path = "") {
+        return firebase.database().ref(`${auth.uid}/${path}`)
     }
-    storage(img = "") {
-        return firebase.storage().ref(`${auth.uid}/${img}`)
+    storage(file = "") {
+        return firebase.storage().ref(`${auth.uid}/${file}`)
     }
     config = {
         apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
