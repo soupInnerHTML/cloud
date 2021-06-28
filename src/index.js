@@ -8,13 +8,12 @@ import "./index.css";
 firebase.init()
 
 ReactDOM.render(
-    <React.StrictMode>
-        <SnackbarProvider anchorOrigin={{
-            vertical: "bottom",
-            horizontal: "right",
-        }}>
-            <App />
-        </SnackbarProvider>
-    </React.StrictMode>,
+    <SnackbarProvider anchorOrigin={{
+        vertical: "bottom",
+        horizontal: "right",
+    }}>
+        <App />
+    </SnackbarProvider>
+    ,
     document.getElementById("root")
 );

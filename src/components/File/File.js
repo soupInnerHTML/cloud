@@ -17,6 +17,7 @@ const File = ({ fileURL, fileName, id, }) => {
 
     const handleClose = () => {
         setAnchorEl(null);
+        console.log("__handleClose__")
     };
 
     return (

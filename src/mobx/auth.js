@@ -28,6 +28,14 @@ class Auth {
         this.isLoggedIn = true
     }
 
+    signUp = async ({ email, password, }) => {
+        const { user, } = await firebase.auth().createUserWithEmailAndPassword(email, password)
+
+        localStorage.setItem("uid", user.uid)
+        this.uid = user.uid
+        this.isLoggedIn = true
+    }
+
     exit = () => {
         this.uid = null
         this.isLoggedIn = false

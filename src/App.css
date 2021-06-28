@@ -89,3 +89,16 @@
   bottom: 15px;
   right: 50%;
 }
+.backdrop__icon {
+  font-size: 272px !important;
+  color: #fff;
+  animation: 1s pulse;
+}
+@keyframes pulse{
+  from {
+    font-size: 272px !important;
+  }
+  to {
+    font-size: 282px !important;
+  }
+}
